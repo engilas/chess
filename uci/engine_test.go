@@ -90,7 +90,7 @@ func TestStop(t *testing.T) {
 	if err := eng.Run(uci.CmdStop); err != nil {
 		t.Fatal(err)
 	}
-	if eng.SearchResults().BestMove.S2() != chess.D4 {
+	if eng.SearchResults().BestMove.S2() != chess.E4 {
 		t.Fatal("expected a different move")
 	}
 }
