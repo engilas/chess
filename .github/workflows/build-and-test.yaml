@@ -9,8 +9,8 @@ jobs:
       - uses: actions/setup-go@v2
         with:
           go-version: 1.17
-      - run: wget https://stockfishchess.org/files/stockfish_14.1_linux_x64.zip
-      - run: unzip stockfish_14.1_linux_x64.zip
+      - run: wget https://github.com/official-stockfish/Stockfish/releases/download/sf_16/stockfish-ubuntu-x86-64-avx2.tar
+      - run: tar -xvf stockfish-ubuntu-x86-64-avx2.tar
       - run: ln stockfish_14.1_linux_x64/stockfish_14.1_linux_x64 stockfish
       - run: chmod u+x stockfish
       - run: go build -v ./...
